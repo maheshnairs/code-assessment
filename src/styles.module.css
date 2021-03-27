@@ -1,0 +1,70 @@
+.card {
+  height: 70%;
+  width: 75%;
+  border: 1px solid #b6b6b6;
+}
+.cardHeader {
+  height: 40px;
+  background: linear-gradient(to bottom, #eaedf2 0, #fff 100%);
+  padding-left: 0.5rem;
+  line-height: 2rem;
+}
+.cardContent {
+  height: calc(100% - 40px);
+  overflow-y: auto;
+}
+.listingCard {
+  width: 63%;
+}
+.filterByContaier{
+  float:right;
+  display: inline-block;
+}
+.filterByInputWrapper{
+  display: inline-block;
+  margin: 0 5px
+}
+select,input{
+  border:none;
+  outline: none;
+  padding: 5px;
+}
+select{
+  padding: 4px;
+}
+.countryDetailCardContent{
+    padding: 0.5rem;
+}
+.detailCard {
+  width: 33%;
+}
+th{
+    background-color: #efefef;
+}
+body,
+html {
+  height: 100%;
+}
+.root {
+  height: 100%;
+}
+.wrapper {
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+table,
+td,
+th {
+  border: 1px solid #ddd;
+  text-align: left;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  padding: 10px;
+}
