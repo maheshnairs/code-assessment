@@ -16,15 +16,13 @@ function CountryList(props: Props) {
     const filteredData = {
       ...countries,
       dirty: [
-        ...countries.original.filter((country: any) => {
-          debugger
-          return (country[filterBy].toLowerCase()).includes(searchString.toLowerCase())
-        }
+        ...countries.original.filter((country: any) =>
+          country[filterBy].toLowerCase().includes(searchString.toLowerCase())
         )
       ]
-    }
+    };
     setCountryList(filteredData);
-  }
+  };
   const sortTable = useCallback(() => {
     const countriesSorted = {
       ...countries,
@@ -96,6 +94,9 @@ function CountryList(props: Props) {
           </div>
         </div>
         <div className={styles.cardContent}>
+          {countries.dirty && countries.dirty.length === 0 && (
+            <div className={styles.zeroStateContainer}>No Data Available!!!</div>
+          )}
           <table>
             <thead>
               <tr>
@@ -129,6 +130,9 @@ function CountryList(props: Props) {
       <div className={`${styles.card} ${styles.detailCard}`}>
         <div className={styles.cardHeader}>Country Details</div>
         <div className={`${styles.cardContent} ${styles.countryDetailCardContent}`}>
+          {!countryInfo[selectedCountry] && (
+            <div className={styles.zeroStateContainer}>Click on More Info to retrive details!!!</div>
+          )}
           {countryInfo[selectedCountry] && renderCountryDetails()}
         </div>
       </div>
