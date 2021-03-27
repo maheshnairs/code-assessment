@@ -12,6 +12,7 @@
 .cardContent {
   height: calc(100% - 40px);
   overflow-y: auto;
+  position: relative;
 }
 .listingCard {
   width: 63%;
@@ -29,11 +30,20 @@ select,input{
   outline: none;
   padding: 5px;
 }
+.zeroStateContainer{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+}
 select{
   padding: 4px;
 }
 .countryDetailCardContent{
     padding: 0.5rem;
+    overflow: none;
 }
 .detailCard {
   width: 33%;
